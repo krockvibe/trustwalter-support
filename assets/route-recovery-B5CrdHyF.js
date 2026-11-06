@@ -1,0 +1,1 @@
+import{r as e}from"./chunk-QTnfLwEv.js";import{t}from"./react-xd4aoMiW.js";import{t as n}from"./useRouter-taNZoCdo.js";var r=e(t(),1);function i({error:e}){let t=n();return(0,r.useEffect)(()=>{e&&console.error(e),t.navigate({to:`/`,replace:!0})},[e,t]),null}export{i as t};
