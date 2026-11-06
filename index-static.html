@@ -910,12 +910,22 @@
 
   <header>
     <div class="container header-inner">
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="logo">
-        <img src="assets/logo.jpeg" alt="Trust wallet supporter logo">
-        <span>Trust wallet supporter</span>
+      <div class="mobile-header-left">
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="mobile-header-center">
+        <div class="logo">
+          <img src="assets/logo.jpeg" alt="Trust wallet supporter logo">
+          <span>Trust wallet supporter</span>
+        </div>
+      </div>
+      <div class="mobile-header-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <svg class="sun" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          <svg class="moon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+        </button>
       </div>
       <nav id="mainNav">
         <a href="#quick-support">Support</a>
@@ -1406,3 +1416,19 @@
 
 </body>
 </html>
+
+
+/* Mobile header tri-layout */
+@media (max-width: 768px) {
+  .mobile-header-left { width: 40px; order: 3; }
+  .mobile-header-center { flex: 1; text-align: left; order: 1; }
+  .mobile-header .logo-center { flex: 1; text-align: left; }
+  .mobile-header .logo-center img { margin: 0; display: block; }
+  .mobile-header .logo-center span { display: block; font-size: 0.9rem; margin: 4px 0 0; color: var(--fg); }
+  .mobile-header-right { width: 40px; margin-left: 16px; order: 2; }
+  .mobile-header-right .theme-toggle { width: 40px; height: 40px; }
+}
+/* Ensure logo text is visible on mobile */
+@media (max-width: 768px) {
+  .logo-center span { color: var(--fg); }
+}
